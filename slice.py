@@ -39,11 +39,8 @@ def do_slice(f):
             save(im.crop((i*256, j*256, (i+1)*256, (j+1)*256)), FULL_ZOOM, x+i, y+j)
 
 def main():
-    infiles = os.listdir('.')
-    screenshot_coords = set()
+    infiles = sys.argv[1:]
     for f in infiles:
-        if not f.startswith('s_'):
-            continue
         do_slice(f)
 
 if __name__ == '__main__':
