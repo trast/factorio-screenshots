@@ -63,19 +63,19 @@ leaflet; I recommend the following settings:
 
 * I applied this patch:
 
-      diff --git 1/leaflet.orig/leaflet.css 2/leaflet/leaflet.css
-      index ac0cd17..f82278a 100644
-      --- 1/leaflet.orig/leaflet.css
-      +++ 2/leaflet/leaflet.css
-      @@ -181,7 +181,7 @@
-       /* visual tweaks */
+        diff --git 1/leaflet.orig/leaflet.css 2/leaflet/leaflet.css
+        index ac0cd17..f82278a 100644
+        --- 1/leaflet.orig/leaflet.css
+        +++ 2/leaflet/leaflet.css
+        @@ -181,7 +181,7 @@
+         /* visual tweaks */
 
-       .leaflet-container {
-      -       background: #ddd;
-      +       background: #000;
-              outline: 0;
-              }
-       .leaflet-container a {
+         .leaflet-container {
+        -       background: #ddd;
+        +       background: #000;
+                outline: 0;
+                }
+         .leaflet-container a {
 
   This makes the default background black, instead of having it
   annoyingly flicker `#ddd` before it loads the black "nonexistent
