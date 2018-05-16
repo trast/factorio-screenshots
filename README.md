@@ -16,7 +16,7 @@ The scripts expect screenshots named `s_<x>_<y>.jpg`, where `x` and
 `y` are chunk coordinates. You can use the following command in the
 Factorio chat/console commandline:
 
-     /c for x=-1000,1000 do for y=-1000,1000 do if game.get_surface(1).is_chunk_generated{x,y} then game.take_screenshot{show_entity_info=true,zoom=1, resolution={1024,1024}, position={x=32*x+16,y=32*y+16}, path="DIR/s_"..x.."_"..y..".jpg"}; end; end; end
+     /c for x=-1000,1000 do for y=-1000,1000 do if game.player.surface.is_chunk_generated{x,y} then game.take_screenshot{show_entity_info=true,zoom=1, resolution={1024,1024}, position={x=32*x+16,y=32*y+16}, path="DIR/s_"..x.."_"..y..".jpg"}; end; end; end
 
 You can choose any `DIR` here. Factorio will even autocreate it if it
 does not exist.
